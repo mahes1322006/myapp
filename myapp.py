@@ -1,5 +1,4 @@
 import streamlit as st
-import flipkart as fk
 user_db={"admin":{"password":"admin123"}}
 product=["laptop","phone","Headphones","Camera","smartwatch"]
 #Registration page
@@ -42,7 +41,7 @@ def chatbot():
     st.write(f"Hello,{st.session_state['username']}!Type the name of a product to check its availability.")
     query=st.chat_input("Search for a product")
     if query:
-        mproducts=fk.sflipkart(query)
+        mproducts= [product for product in product if query.lower() in product.lower()]
         if mproducts:
             st.success(f"Product found:{','.join(mproducts)}")
         else:
