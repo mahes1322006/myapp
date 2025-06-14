@@ -39,6 +39,10 @@ def login_page():
 def chatbot():
     st.title("Smart Shop")
     st.write(f"Hello,{st.session_state['username']}!Type the name of a product to check its availability.")
+    if st.button("Logout"):
+            st.session_state["authenticated"]=False
+            st.session_state["page"]="Login"
+            st.rerun()
     query=st.chat_input("Search for a product")
     if query:
         mproducts= [product for product in product if query.lower() in product.lower()]
@@ -46,10 +50,7 @@ def chatbot():
             st.success(f"Product found:{','.join(mproducts)}")
         else:
             st.error("No matching product found")
-        if st.navigation("Logout"):
-            st.session_state["authenticated"]=False
-            st.session_state["page"]="Login"
-            st.rerun()
+        
 #main app
 
 if "authenticated" not in st.session_state:
