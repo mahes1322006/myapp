@@ -1,0 +1,5 @@
+streamlit
+requests
+bcrypt
+mysql_connector_python
+BeautifulSoup4
