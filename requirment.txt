@@ -1,5 +1,5 @@
 requests
 beautifulsoup4
-from bs4 import Beautifulsoup4
+Beautifulsoup4
 streamlit
 mysql_connetor_python
