@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-from bs4  import BeautifulSoup
+from bs4 import BeautifulSoup
 from urllib.parse import quote
 import mysql.connector
 import bcrypt
