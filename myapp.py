@@ -36,8 +36,8 @@ def check_flipkart_availability(product_name):
 def get_connection():
     return mysql.connector.connect(
         host="localhost",
-        user="smartshopbot",
-        password="smartshop1419",
+        user="root",
+        password="root",
         database="smartshop_details"
     )
 
