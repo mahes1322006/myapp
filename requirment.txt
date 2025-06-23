@@ -1,4 +1,0 @@
-requests
-BeautifulSoup4
-streamlit
-mysql_connetor_python
